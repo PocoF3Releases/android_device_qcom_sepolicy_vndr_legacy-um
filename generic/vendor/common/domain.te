@@ -53,6 +53,7 @@ dontaudit domain kernel:system module_request;
 get_prop(domain, vendor_security_patch_level_prop)
 neverallow {
      coredomain
+     recovery_only(`-recovery')
      -init
      -ueventd
      -vold
